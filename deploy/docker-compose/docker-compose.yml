@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  registry:
+    image: korext/oss-registry:1.0
+    ports:
+      - "3000:3000"
+    environment:
+      - STORAGE_BACKEND=local
+      - STORAGE_BUCKET=/data
+      - PUBLIC_REGISTRY_URL=https://oss.korext.com/registry
+    volumes:
+      - registry_data:/data
+
+volumes:
+  registry_data:

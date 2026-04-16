@@ -1,0 +1,62 @@
+schema: https://oss.korext.com/supply-chain/schema
+version: '1.0'
+project:
+  name: supply-chain-attestation
+  path: /Users/tombruno/Downloads/ai-attestation/supply-chain-attestation
+  manifest: detected
+  ecosystem: npm
+generated: '2026-04-16T07:15:07.003Z'
+dependencies:
+  total: 6
+  scanned: 6
+  with_attestation: 0
+  without_attestation: 6
+  coverage_percentage: 0
+ai_composition:
+  weighted_percentage: 0
+  aggregate_assisted_commits: 0
+  aggregate_total_commits: 0
+governance_tiers:
+  attested: 0
+  scanned: 0
+  ungoverned: 0
+  no_attestation: 6
+tools_detected: []
+high_risk_dependencies: []
+dependencies_detail:
+  - name: '@iarna/toml'
+    version: 2.2.5
+    ecosystem: npm
+    attestation_source: none
+    ai_percentage: 0
+    governance_tier: NO_ATTESTATION
+  - name: argparse
+    version: 2.0.1
+    ecosystem: npm
+    attestation_source: none
+    ai_percentage: 0
+    governance_tier: NO_ATTESTATION
+  - name: js-yaml
+    version: 4.1.1
+    ecosystem: npm
+    attestation_source: none
+    ai_percentage: 0
+    governance_tier: NO_ATTESTATION
+  - name: sax
+    version: 1.6.0
+    ecosystem: npm
+    attestation_source: none
+    ai_percentage: 0
+    governance_tier: NO_ATTESTATION
+  - name: xml2js
+    version: 0.6.2
+    ecosystem: npm
+    attestation_source: none
+    ai_percentage: 0
+    governance_tier: NO_ATTESTATION
+  - name: xmlbuilder
+    version: 11.0.1
+    ecosystem: npm
+    attestation_source: none
+    ai_percentage: 0
+    governance_tier: NO_ATTESTATION

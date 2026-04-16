@@ -1,0 +1,61 @@
+name: 'Supply Chain Attestation Check'
+description: 'Scan supply chain AI provenance and enforce policy'
+author: 'Korext'
+
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  max-ai-percentage:
+    description: 'Maximum weighted AI percentage'
+    required: false
+    default: ''
+  max-high-risk:
+    description: 'Maximum high risk dependencies'
+    required: false
+    default: ''
+  min-coverage:
+    description: 'Minimum attestation coverage'
+    required: false
+    default: ''
+  block-ungoverned-ai:
+    description: 'Fail if any HIGH or FULL AI dep lacks governance'
+    required: false
+    default: 'false'
+  require-attested-for:
+    description: 'Glob for deps requiring ATTESTED tier'
+    required: false
+    default: ''
+  ecosystem:
+    description: 'Force ecosystem'
+    required: false
+    default: ''
+  sbom-output:
+    description: 'Emit SBOM: cyclonedx or spdx'
+    required: false
+    default: ''
+  private-registry:
+    description: 'Private registry URL'
+    required: false
+    default: ''
+  private-registry-token:
+    description: 'Private registry auth token'
+    required: false
+    default: ''
+
+outputs:
+  weighted-ai-percentage:
+    description: "Calculated weighted AI percentage"
+  high-risk-count:
+    description: "Number of high risk dependencies found"
+  coverage:
+    description: "Attestation coverage percentage"
+  sbom-path:
+    description: "Path to generated SBOM file"
+  status:
+    description: "Policy check status"
+
+runs:
+  using: 'node20'
+  main: 'index.js'
