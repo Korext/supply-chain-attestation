@@ -1,0 +1,68 @@
+name: 'AI Supply Chain Attestation'
+description: 'Monitor and govern AI generated code in your dependency tree'
+author: 'Korext'
+
+branding:
+  icon: 'package'
+    color: 'violet'
+
+    inputs:
+      github_token:
+          description: 'GitHub token'
+              required: true
+                fail-on-ai:
+                    description: 'Fail if any AI generated code is detected'
+                        required: false
+                            default: 'false'
+                              weighted-ai-threshold:
+                                  description: 'Maximum weighted AI percentage allowed'
+                                      required: false
+                                          default: '10'
+                                            max-high-risk:
+                                                description: 'Maximum high risk dependencies'
+                                                    required: false
+                                                        default: ''
+                                                          min-coverage:
+                                                              description: 'Minimum attestation coverage'
+                                                                  required: false
+                                                                      default: ''
+                                                                        block-ungoverned-ai:
+                                                                            description: 'Fail if any HIGH or FULL AI dep lacks governance'
+                                                                                required: false
+                                                                                    default: 'false'
+                                                                                      require-attested-for:
+                                                                                          description: 'Glob for deps requiring ATTESTED tier'
+                                                                                              required: false
+                                                                                                  default: ''
+                                                                                                    ecosystem:
+                                                                                                        description: 'Force ecosystem'
+                                                                                                            required: false
+                                                                                                                default: ''
+                                                                                                                  sbom-output:
+                                                                                                                      description: 'Emit SBOM: cyclonedx or spdx'
+                                                                                                                          required: false
+                                                                                                                              default: ''
+                                                                                                                                private-registry:
+                                                                                                                                    description: 'Private registry URL'
+                                                                                                                                        required: false
+                                                                                                                                            default: ''
+                                                                                                                                              private-registry-token:
+                                                                                                                                                  description: 'Private registry auth token'
+                                                                                                                                                      required: false
+                                                                                                                                                          default: ''
+                                                                                                                                                          
+                                                                                                                                                          outputs:
+                                                                                                                                                            weighted-ai-percentage:
+                                                                                                                                                                description: "Calculated weighted AI percentage"
+                                                                                                                                                                  high-risk-count:
+                                                                                                                                                                      description: "Number of high risk dependencies found"
+                                                                                                                                                                        coverage:
+                                                                                                                                                                            description: "Attestation coverage percentage"
+                                                                                                                                                                              sbom-path:
+                                                                                                                                                                                  description: "Path to generated SBOM file"
+                                                                                                                                                                                    status:
+                                                                                                                                                                                        description: "Policy check status"
+                                                                                                                                                                                        
+                                                                                                                                                                                        runs:
+                                                                                                                                                                                          using: 'node20'
+                                                                                                                                                                                            main: 'action/index.js'
