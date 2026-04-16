@@ -6,6 +6,12 @@ const rubygems = require('./rubygems');
 const maven = require('./maven');
 const nuget = require('./nuget');
 const composer = require('./composer');
+const swift = require('./swift');
+const cocoapods = require('./cocoapods');
+const pub = require('./pub');
+const hex = require('./hex');
+const cpan = require('./cpan');
+const conda = require('./conda');
 
 module.exports = {
   npm,
@@ -16,6 +22,12 @@ module.exports = {
   maven,
   nuget,
   composer,
+  swift,
+  cocoapods,
+  pub,
+  hex,
+  cpan,
+  conda,
 
   detectAll(projectPath) {
     const detected = [];

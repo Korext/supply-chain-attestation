@@ -105,7 +105,7 @@ Other supported strategies include:
 
 ## 6. Ecosystem Coverage
 
-To ensure broad applicability, scanners MUST identify, enumerate, and evaluate dependencies across multiple ecosystems.
+To ensure broad applicability, scanners MUST identify, enumerate, and evaluate dependencies across the following fourteen ecosystems.
 
 ### 6.1 npm
 - **Manifest Detection**: `package.json`
@@ -162,6 +162,48 @@ To ensure broad applicability, scanners MUST identify, enumerate, and evaluate d
 - **Repository URL**: Packagist API (`repo.packagist.org/p2/{name}.json`) reading `source`
 - **Package URL**: `packagist.org/packages/{name}`
 - **Package Attestation**: Search for `.ai-attestation.yaml` in package archive
+
+### 6.9 Swift Package Manager
+- **Manifest Detection**: `Package.swift`
+- **Tree Enumeration**: Parse `Package.resolved` (v2/v3 format)
+- **Repository URL**: Repository URL declared in `Package.swift` dependency entry
+- **Package URL**: `swiftpackageindex.com/search?query={name}`
+- **Package Attestation**: Search for `.ai-attestation.yaml` in checked-out package source
+
+### 6.10 CocoaPods (iOS/macOS)
+- **Manifest Detection**: `Podfile`, `Podfile.lock`
+- **Tree Enumeration**: Parse `Podfile.lock` PODS section
+- **Repository URL**: CocoaPods CDN trunk index
+- **Package URL**: `cocoapods.org/pods/{name}`
+- **Package Attestation**: Search for `.ai-attestation.yaml` in pod source
+
+### 6.11 Pub (Dart/Flutter)
+- **Manifest Detection**: `pubspec.yaml`, `pubspec.lock`
+- **Tree Enumeration**: Parse `pubspec.lock` (YAML format)
+- **Repository URL**: Pub API (`pub.dev/api/packages/{name}`)
+- **Package URL**: `pub.dev/packages/{name}/versions/{version}`
+- **Package Attestation**: Search for `.ai-attestation.yaml` in package archive
+
+### 6.12 Hex (Elixir/Erlang)
+- **Manifest Detection**: `mix.exs`, `mix.lock`
+- **Tree Enumeration**: Parse `mix.lock` (Elixir map literal with `:hex` and `:git` entries)
+- **Repository URL**: Hex API (`hex.pm/api/packages/{name}`)
+- **Package URL**: `hex.pm/packages/{name}/{version}`
+- **Package Attestation**: Search for `.ai-attestation.yaml` in package tarball
+
+### 6.13 CPAN (Perl)
+- **Manifest Detection**: `cpanfile`, `cpanfile.snapshot`, `META.json`, `Makefile.PL`
+- **Tree Enumeration**: Parse `cpanfile.snapshot` (Carton lockfile) or `META.json` prereqs
+- **Repository URL**: MetaCPAN (`metacpan.org/pod/{name}`)
+- **Package URL**: `metacpan.org/release/{dist-name}`
+- **Package Attestation**: Search for `.ai-attestation.yaml` in distribution tarball
+
+### 6.14 Conda (Python/Data Science)
+- **Manifest Detection**: `environment.yml`, `environment.yaml`, `conda-lock.yml`
+- **Tree Enumeration**: Parse `conda-lock.yml` (precise resolution) or `environment.yml` dependency list
+- **Repository URL**: Anaconda.org (`anaconda.org/conda-forge/{name}`)
+- **Package URL**: `anaconda.org/conda-forge/{name}/{version}`
+- **Package Attestation**: Search for `.ai-attestation.yaml` in conda package archive
 
 ## 7. SBOM Integration
 

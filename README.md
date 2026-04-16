@@ -1,6 +1,6 @@
 # Supply Chain Attestation
 
-AI provenance across your entire dependency tree. Eight ecosystems. SBOM integration. Private registry support.
+AI provenance across your entire dependency tree. Fourteen ecosystems. SBOM integration. Private registry support.
 
 [![License: Code](https://img.shields.io/badge/code-Apache%202.0-blue)](LICENSE)
 [![License: Spec](https://img.shields.io/badge/spec-CC0%201.0-green)](LICENSE-SPEC)
@@ -8,7 +8,7 @@ AI provenance across your entire dependency tree. Eight ecosystems. SBOM integra
 
 You know your vulnerabilities thanks to Snyk and Dependabot. You know your licenses thanks to FOSSA. But you do not know what percentage of your software supply chain was written with AI assistance.
 
-Supply Chain Attestation answers that across eight package ecosystems, integrates with CycloneDX and SPDX, and supports private registries for enterprise deployment.
+Supply Chain Attestation answers that across fourteen package ecosystems, integrates with CycloneDX and SPDX, and supports private registries for enterprise deployment.
 
 ## Quick Start
 
@@ -16,18 +16,24 @@ Supply Chain Attestation answers that across eight package ecosystems, integrate
 npx @korext/supply-check scan
 \`\`\`
 
-## Supported Ecosystems (All Ready in v1.0)
+## Supported Ecosystems (14)
 
-| Ecosystem | Status |
-|-----------|--------|
-| npm | Ready |
-| PyPI | Ready |
-| Cargo | Ready |
-| Go Modules | Ready |
-| RubyGems | Ready |
-| Maven | Ready |
-| NuGet | Ready |
-| Composer | Ready |
+| Ecosystem | Manifest | Lockfile |
+|-----------|----------|----------|
+| npm | package.json | package-lock.json, yarn.lock |
+| PyPI | pyproject.toml, requirements.txt, setup.py | poetry.lock, Pipfile.lock |
+| Cargo | Cargo.toml | Cargo.lock |
+| Go Modules | go.mod | go.sum |
+| RubyGems | Gemfile | Gemfile.lock |
+| Maven | pom.xml, build.gradle | pom.xml resolution |
+| NuGet | .csproj, packages.config | .csproj PackageReference |
+| Composer | composer.json | composer.lock |
+| Swift PM | Package.swift | Package.resolved |
+| CocoaPods | Podfile | Podfile.lock |
+| Pub | pubspec.yaml | pubspec.lock |
+| Hex | mix.exs | mix.lock |
+| CPAN | cpanfile, META.json | cpanfile.snapshot |
+| Conda | environment.yml | conda-lock.yml |
 
 ## Example Output
 

@@ -1,7 +1,7 @@
 {
   "name": "@korext/supply-check",
-  "version": "1.0.0",
-  "description": "AI provenance scanner for your software supply chain. 8 ecosystems. SBOM integration. Private registry support.",
+  "version": "1.1.0",
+  "description": "AI provenance scanner for your software supply chain. 14 ecosystems. SBOM integration. Private registry support.",
   "keywords": [
     "supply-chain",
     "sbom",
@@ -22,7 +22,13 @@
     "rubygems",
     "maven",
     "nuget",
-    "composer"
+    "composer",
+    "swift",
+    "cocoapods",
+    "pub",
+    "hex",
+    "cpan",
+    "conda"
   ],
   "author": "Korext <tombruno@korext.com> (https://korext.com)",
   "license": "Apache-2.0",

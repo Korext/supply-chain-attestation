@@ -23,7 +23,7 @@ module.exports = async function scan(args) {
     console.log(`Usage: supply-check scan [options]
 
 Options:
-  --ecosystem <name>      Force ecosystem (npm|pypi|cargo|go|rubygems|maven|nuget|composer)
+  --ecosystem <name>      Force ecosystem (npm|pypi|cargo|go|rubygems|maven|nuget|composer|swift|cocoapods|pub|hex|cpan|conda)
   --weighting <strategy>  Weighting strategy (uniform|size|imports|loc). Default: size
   --registry <url>        Public registry URL
   --private-registry <url> Private registry URL
@@ -55,7 +55,7 @@ Options:
 
   if (adapters.length === 0) {
     console.log('  No supported ecosystem detected in current directory.');
-    console.log('  Supported: npm, pypi, cargo, go, rubygems, maven, nuget, composer\n');
+    console.log('  Supported: npm, pypi, cargo, go, rubygems, maven, nuget, composer, swift, cocoapods, pub, hex, cpan, conda\n');
     return;
   }
 

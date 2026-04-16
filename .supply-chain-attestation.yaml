@@ -5,7 +5,7 @@ project:
   path: /Users/tombruno/Downloads/ai-attestation/supply-chain-attestation
   manifest: detected
   ecosystem: npm
-generated: '2026-04-16T07:15:07.003Z'
+generated: '2026-04-16T08:03:43.091Z'
 dependencies:
   total: 6
   scanned: 6
