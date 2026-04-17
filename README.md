@@ -124,7 +124,7 @@ npx @korext/supply-check publish
 Add the badge:
 
 \`\`\`markdown
-[![AI Attestation](https://oss.korext.com/supply-chain/badge/npm/YOUR-PACKAGE)](https://oss.korext.com/supply-chain/registry/npm/YOUR-PACKAGE)
+[![AI Attestation](https://oss.korext.com/api/supply-chain/badge/npm/YOUR-PACKAGE)](https://oss.korext.com/supply-chain/registry/npm/YOUR-PACKAGE)
 \`\`\`
 
 ## What This Complements
