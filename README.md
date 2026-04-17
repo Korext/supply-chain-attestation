@@ -12,9 +12,9 @@ Supply Chain Attestation answers that across fourteen package ecosystems, integr
 
 ## Quick Start
 
-\`\`\`bash
+```bash
 npx @korext/supply-check scan
-\`\`\`
+```
 
 ## Supported Ecosystems (14)
 
@@ -37,7 +37,7 @@ npx @korext/supply-check scan
 
 ## Example Output
 
-\`\`\`
+```
 Supply Chain Attestation
 
 Ecosystem: npm
@@ -56,13 +56,13 @@ High Risk Dependencies: 3
   some-small-lib@2.0.0: 89% AI, ungoverned
   another-lib@1.2.3: 65% AI, ungoverned
   one-more@0.9.0: 72% AI, no attestation
-\`\`\`
+```
 
 ## Three Attestation Sources
 
-1. **Package**: Dependency's published artifact includes \`.ai-attestation.yaml\`
-2. **Registry**: Data hosted at \`oss.korext.com/registry/\` (automated scans + maintainer submissions)
-3. **Repository**: Dependency's source repo has \`.ai-attestation.yaml\`
+1. **Package**: Dependency's published artifact includes `.ai-attestation.yaml`
+2. **Registry**: Data hosted at `oss.korext.com/registry/` (automated scans + maintainer submissions)
+3. **Repository**: Dependency's source repo has `.ai-attestation.yaml`
 
 Priority: Package > Registry > Repository
 
@@ -70,29 +70,29 @@ Priority: Package > Registry > Repository
 
 | Command | Description |
 |---------|-------------|
-| \`scan\` | Scan dependency tree |
-| \`report\` | Print detailed report |
-| \`registry\` | Query registry |
-| \`publish\` | Publish attestation (maintainers) |
-| \`check\` | Policy gate for CI |
-| \`sbom\` | Export CycloneDX or SPDX |
+| `scan` | Scan dependency tree |
+| `report` | Print detailed report |
+| `registry` | Query registry |
+| `publish` | Publish attestation (maintainers) |
+| `check` | Policy gate for CI |
+| `sbom` | Export CycloneDX or SPDX |
 
 ## SBOM Integration
 
-\`\`\`bash
+```bash
 npx @korext/supply-check sbom --format cyclonedx > sbom.json
 npx @korext/supply-check sbom --format spdx > sbom.spdx.json
-\`\`\`
+```
 
 AI data embedded via standard extension mechanisms:
-- CycloneDX 1.6: \`properties\` array with \`korext:\` namespace
-- SPDX 2.3: \`annotations\` with \`korext:\` properties
+- CycloneDX 1.6: `properties` array with `korext:` namespace
+- SPDX 2.3: `annotations` with `korext:` properties
 
 Compatible with any SBOM consumer.
 
 ## CI/CD
 
-\`\`\`yaml
+```yaml
 - uses: korext/supply-chain-attestation/action@v1
   with:
     max-ai-percentage: 40
@@ -100,7 +100,7 @@ Compatible with any SBOM consumer.
     block-ungoverned-ai: true
     require-attested-for: "*payment*"
     sbom-output: cyclonedx
-\`\`\`
+```
 
 ## Private Registry (Enterprise)
 
@@ -116,16 +116,16 @@ See [PRIVATE-REGISTRY.md](docs/PRIVATE-REGISTRY.md).
 
 ## For Package Maintainers
 
-\`\`\`bash
+```bash
 npx @korext/ai-attestation init
 npx @korext/supply-check publish
-\`\`\`
+```
 
 Add the badge:
 
-\`\`\`markdown
+```markdown
 [![AI Attestation](https://oss.korext.com/supply-chain/badge/npm/YOUR-PACKAGE)](https://oss.korext.com/supply-chain/registry/npm/YOUR-PACKAGE)
-\`\`\`
+```
 
 ## What This Complements
 
