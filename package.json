@@ -1,6 +1,6 @@
 {
   "name": "@korext/supply-check",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "AI provenance scanner for your software supply chain. 14 ecosystems. SBOM integration. Private registry support.",
   "keywords": [
     "supply-chain",
