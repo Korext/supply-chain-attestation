@@ -1,0 +1,40 @@
+schema: https://oss.korext.com/supply-chain/schema
+version: "1.0"
+project:
+  name: startup-mvp
+  ecosystem: npm
+generated: 2026-04-15T12:00:00Z
+dependencies:
+  total: 200
+  scanned: 195
+  with_attestation: 40
+  without_attestation: 155
+  coverage_percentage: 20.5
+ai_composition:
+  weighted_percentage: 61.2
+  governance_distribution:
+    ATTESTED: 2
+    SCANNED: 5
+    UNGOVERNED: 33
+    NO_ATTESTATION: 155
+high_risk:
+  - name: fast-auth
+    version: 3.1.0
+    ai_percentage: 95
+    governance: ungoverned
+  - name: data-pipeline
+    version: 1.0.0
+    ai_percentage: 88
+    governance: ungoverned
+  - name: render-engine
+    version: 2.4.1
+    ai_percentage: 78
+    governance: ungoverned
+  - name: config-loader
+    version: 0.5.0
+    ai_percentage: 71
+    governance: no_attestation
+  - name: api-client
+    version: 4.0.0
+    ai_percentage: 67
+    governance: ungoverned

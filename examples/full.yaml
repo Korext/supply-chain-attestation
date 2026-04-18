@@ -1,0 +1,44 @@
+schema: https://oss.korext.com/supply-chain/schema
+version: "1.0"
+project:
+  name: enterprise-platform
+  ecosystem: npm
+  lockfile: package-lock.json
+generated: 2026-04-15T12:00:00Z
+dependencies:
+  total: 847
+  scanned: 823
+  with_attestation: 127
+  without_attestation: 696
+  coverage_percentage: 15.4
+ai_composition:
+  weighted_percentage: 28.3
+  governance_distribution:
+    ATTESTED: 12
+    SCANNED: 89
+    UNGOVERNED: 722
+    NO_ATTESTATION: 24
+  tools_detected:
+    - name: GitHub Copilot
+      dependency_count: 89
+    - name: Cursor
+      dependency_count: 31
+    - name: Claude Code
+      dependency_count: 7
+high_risk:
+  - name: some-small-lib
+    version: 2.0.0
+    ai_percentage: 89
+    governance: ungoverned
+  - name: another-lib
+    version: 1.2.3
+    ai_percentage: 65
+    governance: ungoverned
+  - name: one-more
+    version: 0.9.0
+    ai_percentage: 72
+    governance: no_attestation
+policy:
+  max_ai_percentage: null
+  block_ungoverned: false
+  require_attested_for: []

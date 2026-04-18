@@ -1,0 +1,21 @@
+schema: https://oss.korext.com/supply-chain/schema
+version: "1.0"
+project:
+  name: legacy-api
+  ecosystem: npm
+generated: 2026-04-15T12:00:00Z
+dependencies:
+  total: 120
+  scanned: 118
+  with_attestation: 15
+  without_attestation: 103
+  coverage_percentage: 12.7
+ai_composition:
+  weighted_percentage: 0.0
+  governance_distribution:
+    ATTESTED: 0
+    SCANNED: 0
+    UNGOVERNED: 0
+    NO_ATTESTATION: 118
+  tools_detected: []
+high_risk: []

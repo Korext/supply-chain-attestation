@@ -1,0 +1,14 @@
+schema: https://oss.korext.com/supply-chain/schema
+version: "1.0"
+project:
+  name: example-app
+  ecosystem: npm
+generated: 2026-04-15T12:00:00Z
+dependencies:
+  total: 50
+  scanned: 48
+  with_attestation: 5
+  without_attestation: 43
+  coverage_percentage: 10.4
+ai_composition:
+  weighted_percentage: 12.3
